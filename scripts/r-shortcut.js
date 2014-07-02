@@ -120,7 +120,7 @@
 	};
 	slack.initializer = function()
 	{
-		if((slack.$msg = $('textarea#message-input')).length)
+		if($.isReady && (slack.$msg = $('textarea#message-input')).length)
 			clearInterval(slack.initializerInterval), slack.init(),
 				slack.initialized = true; // All set now :-)
 	};
