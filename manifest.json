@@ -20,7 +20,7 @@
 				"styles/slacktastic.css"
 			],
 			"js"     : [
-				"scripts/jquery.min.js",
+				"scripts/jquery-2.1.1.min.js",
 				"scripts/r-shortcut.js",
 				"scripts/style-helpers.js",
 				"scripts/threads.js"
