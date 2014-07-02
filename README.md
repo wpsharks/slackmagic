@@ -1,3 +1,5 @@
+<img src="images/icon-128.png" width="128" align="right" />
+
 # SlackMagic
 
 Slack theme/enhancements.
