@@ -1,0 +1,111 @@
+/*
+Background Colors
+*/
+#messages_container, #footer
+{
+	background : #EEEEEE !important;
+}
+#channel_members_toggle,
+#msgs_div > .day_divider,
+#msgs_div > .day_divider > .day_divider_label,
+#msgs_div > #msgs_unread_divider > .divider_label,
+#msgs_div > .message > .msg_actions
+{
+	background : inherit !important;
+}
+#msgs_div > .day_divider > .day_divider_label,
+#msgs_div > #msgs_unread_divider > .divider_label
+{
+	border-radius : 5px !important;
+	background    : #FFFFFF !important;
+}
+#msgs_div > .message > .timestamp
+{
+	color : #BABBBF !important;
+}
+
+/*
+Message Dividers
+*/
+#msgs_div > .message:before
+{
+	content    : '' !important;
+	clear      : both !important;
+	display    : block !important;
+	margin     : 5px 0 5px 0 !important;
+	border-top : 1px dashed #DBDBDB !important;
+}
+#msgs_div > #msgs_unread_divider
+{
+	margin : 15px 0 15px 0 !important;
+}
+#msgs_div > #msgs_unread_divider > .divider_label
+{
+	padding     : .5em !important;
+	font-size   : 1.2em !important;
+	font-weight : bold !important;
+	margin      : -0.8em 0 0 0 !important;
+}
+
+/*
+Messages
+*/
+#msgs_div > .message > .msg_actions
+{
+	top   : 2px !important;
+	right : 5px !important;
+}
+#msgs_div > .message.show_user > a.member_image,
+#msgs_div > .message.show_user > a > .member_image
+{
+	top  : 5px !important;
+	left : 5px !important;
+}
+#msgs_div > .message > .message_star_holder
+{
+	top      : 2px !important;
+	left     : auto !important;
+	right    : 20px !important;
+	position : absolute !important;
+}
+#msgs_div > .message > .message_content > .special_formatting_quote,
+#search_message_results > .search_message_result > .search_message_result_text > .search_message_result_hit > .special_formatting_quote
+{
+	zoom    : 0.9 !important;
+	opacity : 0.7 !important;
+}
+
+/*
+Chat Messages
+*/
+#msgs_div > .message.via-hipchat,
+#msgs_div > .message:not(.bot_message)
+{
+	border        : 0 !important;
+	border-radius : 5px !important;
+	background    : #FFFFFF !important;
+	margin        : 10px 0 10px 0 !important;
+	box-shadow    : 0 0 2px 2px rgba(255, 255, 255, 0.5) !important;
+}
+#msgs_div > .message.via-hipchat:before,
+#msgs_div > .message:not(.bot_message):before
+{
+	display : none !important;
+}
+#msgs_div > .message.via-hipchat:not(.show_user) > .timestamp,
+#msgs_div > .message:not(.bot_message):not(.show_user) > .timestamp
+{
+	left : 0 !important;
+}
+body.no_avatars #msgs_div > .message.via-hipchat > .message_sender > a > img.inline_bot_icon
+{
+	display : none !important;
+}
+
+/*
+Bot Messages
+*/
+#msgs_div > .message.bot_message:not(.via-hipchat)
+{
+	zoom : 0.85 !important;
+}
