@@ -57,15 +57,15 @@
 		};
 		slack.winSelectionParentMentionName = function()
 		{
-			var $winSelectionParent = $(slack.getWinSelectionParent());
-			var $parentMsg, _memberService, teamMember, serviceName;
+			var $parentMsg, _memberService, teamMember, serviceName,
+				$winSelectionParent = $(slack.getWinSelectionParent());
 
 			if(($parentMsg = $winSelectionParent.closest('.message.show_user:not(.hidden)')).length
 			   && (_memberService = $parentMsg.find('> a[data-member-id][href^="/team/"]').first().attr('href')))
 				teamMember = _memberService.replace(/^\/team\//ig, '');
 
 			else if(($parentMsg = $winSelectionParent.closest('.message.show_user:not(.hidden)')).length
-			        && ((_memberService = $parentMsg.find('> span.message_sender > a[href^="/services/"]:not:has(img)').first().html())
+			        && ((_memberService = $parentMsg.find('> span.message_sender > a[href^="/services/"]').not(':has(img)').first().html())
 			            || (_memberService = $parentMsg.find('> span.message_sender').first().html())))
 				serviceName = slack.plainText(_memberService);
 
@@ -74,7 +74,7 @@
 				teamMember = _memberService.replace(/^\/team\//ig, '');
 
 			else if(($parentMsg = $winSelectionParent.closest('.message:not(.hidden)').prevAll('.message.show_user:not(.hidden)').first()).length
-			        && ((_memberService = $parentMsg.find('> span.message_sender > a[href^="/services/"]:not:has(img)').first().html())
+			        && ((_memberService = $parentMsg.find('> span.message_sender > a[href^="/services/"]').not(':has(img)').first().html())
 			            || (_memberService = $parentMsg.find('> span.message_sender').first().html())))
 				serviceName = slack.plainText(_memberService);
 
