@@ -4,7 +4,7 @@
 
 Slack theme/enhancements.
 
-## Installation Instructions
+#### Installation Instructions
 
 - Download the ZIP file from the `master` branch here at GitHub.
   Or just clone the repo, that's fine too.

@@ -58,25 +58,25 @@
 		slack.winSelectionParentMentionName = function()
 		{
 			var $winSelectionParent = $(slack.getWinSelectionParent());
-			var $messageShowingUser, _teamService, teamMember, serviceName;
+			var $parentMsg, _memberService, teamMember, serviceName;
 
-			if(($messageShowingUser = $winSelectionParent.closest('.message.show_user')).length
-			   && (_teamService = $messageShowingUser.find('> a[data-member-id][target^="/team/"]').first().attr('target')))
-				teamMember = _teamService.replace(/^\/team\//ig, '');
+			if(($parentMsg = $winSelectionParent.closest('.message.show_user:not(.hidden)')).length
+			   && (_memberService = $parentMsg.find('> a[data-member-id][href^="/team/"]').first().attr('href')))
+				teamMember = _memberService.replace(/^\/team\//ig, '');
 
-			else if(($messageShowingUser = $winSelectionParent.closest('.message.show_user')).length
-			        && ((_teamService = $messageShowingUser.find('> span.message_sender > a[target^="/services/"]').html())
-			            || (_teamService = $messageShowingUser.find('> span.message_sender').html())))
-				serviceName = slack.plainText(_teamService);
+			else if(($parentMsg = $winSelectionParent.closest('.message.show_user:not(.hidden)')).length
+			        && ((_memberService = $parentMsg.find('> span.message_sender > a[href^="/services/"]:not:has(img)').first().html())
+			            || (_memberService = $parentMsg.find('> span.message_sender').first().html())))
+				serviceName = slack.plainText(_memberService);
 
-			else if(($messageShowingUser = $winSelectionParent.closest('.message').prevAll('.message.show_user').first()).length
-			        && (_teamService = $messageShowingUser.find('> a[data-member-id][target^="/team/"]').first().attr('target')))
-				teamMember = _teamService.replace(/^\/team\//ig, '');
+			else if(($parentMsg = $winSelectionParent.closest('.message:not(.hidden)').prevAll('.message.show_user:not(.hidden)').first()).length
+			        && (_memberService = $parentMsg.find('> a[data-member-id][href^="/team/"]').first().attr('href')))
+				teamMember = _memberService.replace(/^\/team\//ig, '');
 
-			else if(($messageShowingUser = $winSelectionParent.closest('.message').prevAll('.message.show_user').first()).length
-			        && ((_teamService = $messageShowingUser.find('> span.message_sender > a[target^="/services/"]').html())
-			            || (_teamService = $messageShowingUser.find('> span.message_sender').html())))
-				serviceName = slack.plainText(_teamService);
+			else if(($parentMsg = $winSelectionParent.closest('.message:not(.hidden)').prevAll('.message.show_user:not(.hidden)').first()).length
+			        && ((_memberService = $parentMsg.find('> span.message_sender > a[href^="/services/"]:not:has(img)').first().html())
+			            || (_memberService = $parentMsg.find('> span.message_sender').first().html())))
+				serviceName = slack.plainText(_memberService);
 
 			if(teamMember) return '@' + teamMember;
 

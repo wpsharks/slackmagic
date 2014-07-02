@@ -24,7 +24,9 @@
 	{
 		slack.onDOMSubtreeModifiedRunning = true;
 
-		var threadedMsgs = []; // Initialize.
+		var $body = $('body'), threadedMsgs = [];
+		var denseTheme = $body.hasClass('dense_theme');
+		var noAvatars = $body.hasClass('no_avatars');
 
 		$('#msgs_div').find('> .message:not(.show_user):not(.hidden)')
 			.each(function()
@@ -34,9 +36,9 @@
 				      // It seems rather inconsistent; so here we rely upon `.show_user` only.
 				      var $first = $this.prevAll('.message.show_user:not(.hidden)').first();
 
-				      if(!($senderImage = $first.find('> .member_image').clone()).length)
-					      $senderImage = $first.find('> a[href^="/services/"]').has('> .member_image');
-				      $messageSender = $first.find('> .message_sender');
+				      if(!($senderImage = $first.find('> .member_image').first().clone()).length)
+					      $senderImage = $first.find('> a[href^="/services/"]').has('> .member_image').first();
+				      $messageSender = $first.find('> .message_sender').first();
 
 				      threadedMsgs.push({
 					                        '$this'         : $this,
@@ -47,11 +49,13 @@
 			      });
 		$.each(threadedMsgs, function(i, msg)
 		{
-			if(msg.$senderImage.length && msg.$messageSender.length)
+			if((noAvatars || msg.$senderImage.length)
+			   && msg.$messageSender.length)
 			{
-				msg.$this.addClass('show_user avatar');
-				msg.$this.find('> .msg_actions').after(msg.$senderImage.clone());
-				msg.$this.find('> .timestamp').before(msg.$messageSender.clone());
+				msg.$this.addClass('show_user');
+				if(!noAvatars) msg.$this.addClass('avatar');
+				if(!noAvatars) msg.$this.find('> .msg_actions').first().after(msg.$senderImage.clone());
+				msg.$this.find('> .timestamp').first()[denseTheme ? 'after' : 'before'](msg.$messageSender.clone());
 			}
 		});
 		slack.onDOMSubtreeModifiedRunning = false;
