@@ -54,6 +54,16 @@ Message Dividers
 /*
 Messages
 */
+#msgs_div .copy_only
+{
+	display : none !important;
+}
+.dense_theme #msgs_div > .message > .message_sender:after
+{
+	content      : ':';
+	display      : inline-block;
+	margin-right : 3px;
+}
 #msgs_div > .message > .msg_actions
 {
 	top   : 2px !important;
