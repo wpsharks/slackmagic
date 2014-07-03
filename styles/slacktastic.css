@@ -27,6 +27,10 @@ Background Colors
 /*
 Message Dividers
 */
+#msgs_div > .message
+{
+	margin : 0 !important;
+}
 #msgs_div > .message:before
 {
 	content    : '' !important;
