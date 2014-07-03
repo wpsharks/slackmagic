@@ -58,12 +58,6 @@ Messages
 {
 	display : none !important;
 }
-.dense_theme #msgs_div > .message > .message_sender:after
-{
-	content      : ':';
-	display      : inline-block;
-	margin-right : 3px;
-}
 #msgs_div > .message > .msg_actions
 {
 	top   : 2px !important;
@@ -81,6 +75,12 @@ Messages
 	left     : auto !important;
 	right    : 20px !important;
 	position : absolute !important;
+}
+.dense_theme #msgs_div > .message > .message_sender:after
+{
+	content      : ':';
+	display      : inline-block;
+	margin-right : 3px;
 }
 #msgs_div > .message > .message_content > .special_formatting_quote,
 #search_message_results > .search_message_result > .search_message_result_text > .search_message_result_hit > .special_formatting_quote
