@@ -121,5 +121,5 @@ Bot Messages
 */
 #msgs_div > .message.bot_message:not(.via-hipchat)
 {
-	zoom : 0.85 !important;
+	zoom : 0.9 !important;
 }
