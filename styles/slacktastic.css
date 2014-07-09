@@ -169,7 +169,7 @@ Mentions
 #member_mentions > .message > .message_content a.internal_member_link.internal_current_member_link[data-member-name],
 #search_message_results > .message > .message_content a.internal_member_link.internal_current_member_link[data-member-name]
 {
-	font-weight  : bold !important;
+	font-weight  : 900 !important;
 	color        : #FFFFFF !important;
 	border-color : #4783BF !important;
 	background   : #4282C1 url('chrome-extension://__MSG_@@extension_id__/images/me-bg.png') repeat-x !important;
