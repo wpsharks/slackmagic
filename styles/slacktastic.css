@@ -88,6 +88,35 @@ Messages
 	zoom    : 0.9 !important;
 	opacity : 0.7 !important;
 }
+#msgs_div > .message > .message_content a.internal_member_link[data-member-name],
+#member_mentions > .message > .message_content a.internal_member_link[data-member-name],
+#search_message_results > .message > .message_content a.internal_member_link[data-member-name]
+{
+	line-height     : 1em !important;
+	border-radius   : 4px !important;
+	text-decoration : none !important;
+	display         : inline-block !important;
+	padding         : 0.025em 0.05em !important;
+
+	color           : #000000 !important;
+	border          : 1px solid #C2C2C2 !important;
+	background      : #E6E6E6 !important;
+}
+#msgs_div > .message > .message_content a.internal_member_link.internal_current_member_link[data-member-name],
+#member_mentions > .message > .message_content a.internal_member_link.internal_current_member_link[data-member-name],
+#search_message_results > .message > .message_content a.internal_member_link.internal_current_member_link[data-member-name]
+{
+	font-weight  : bold !important;
+	color        : #FFFFFF !important;
+	border-color : #4783BF !important;
+	background   : #4282C1 url('chrome-extension://__MSG_@@extension_id__/images/me-bg.png') repeat-x !important;
+}
+#msgs_div > .message > .message_content a.internal_member_link[data-member-name] > .mention,
+#member_mentions > .message > .message_content a.internal_member_link[data-member-name] > .mention,
+#search_message_results > .message > .message_content a.internal_member_link[data-member-name] > .mention
+{
+	background : none !important;
+}
 
 /*
 Chat Messages
