@@ -27,6 +27,12 @@
 		$('#msgs_div').find('> .message').has('> .message_sender[class*="via_HipChat"]')
 			.addClass('via-hipchat'); // Mark via HipChat for CSS styles.
 
+		var current_user_name = $.trim($('#current_user_name').text());
+		$('#msgs_div > .message > .message_content a.internal_member_link[data-member-name="' + current_user_name + '"],' +
+		  '#member_mentions > .message > .message_content a.internal_member_link[data-member-name="' + current_user_name + '"],' +
+		  '#search_message_results > .message > .message_content a.internal_member_link[data-member-name="' + current_user_name + '"]')
+			.addClass('internal_current_member_link');
+
 		slack.onDOMSubtreeModifiedRunning = false;
 	};
 	slack.initializer = function()

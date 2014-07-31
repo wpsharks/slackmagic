@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>WebSharks, Inc.</string>
 	<key>Builder Version</key>
-	<string>9537.76.4</string>
+	<string>9537.77.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>SlackMagic</string>
 	<key>CFBundleIdentifier</key>
@@ -13,11 +13,14 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>14.06.30</string>
+	<string>14.07.31</string>
 	<key>CFBundleVersion</key>
-	<string>14.06.30</string>
+	<string>14.07.31</string>
 	<key>Chrome</key>
-	<dict/>
+	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
@@ -25,8 +28,8 @@
 			<key>Start</key>
 			<array>
 				<string>scripts/jquery-2.1.1.min.js</string>
-				<string>scripts/r-shortcut.js</string>
 				<string>scripts/style-helpers.js</string>
+				<string>scripts/r-shortcut.js</string>
 				<string>scripts/threads.js</string>
 			</array>
 		</dict>
@@ -36,7 +39,8 @@
 		</array>
 		<key>Whitelist</key>
 		<array>
-			<string>*://*.slack.com/messages/*</string>
+			<string>https://*.slack.com/messages/*</string>
+			<string>file://*/Slack.app</string>
 		</array>
 	</dict>
 	<key>Description</key>
@@ -50,6 +54,7 @@
 			<key>Allowed Domains</key>
 			<array>
 				<string>*.slack.com</string>
+				<string>*.localhost</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>
@@ -58,6 +63,6 @@
 		</dict>
 	</dict>
 	<key>Website</key>
-	<string>https://github.com/websharks/slackmagic.safariextension</string>
+	<string>https://github.com/websharks/slackmagic</string>
 </dict>
 </plist>
