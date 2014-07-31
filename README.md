@@ -6,12 +6,12 @@ Slack theme/enhancements.
 
 #### Installation Instructions
 
-- Download the ZIP file from the `master` branch here at GitHub.
+- Download the ZIP file from the `000000-dev` branch here at GitHub.
   Or just clone the repo, that's fine too.
 
 	```
 	git clone https://github.com/websharks/slackmagic
-	git checkout master
+	git checkout 000000-dev
 	```
 
 - Now open Chrome and go to: `chrome://extensions/`
