@@ -24,3 +24,7 @@ Slack theme/enhancements.
 
 - Developed by [WebSharks, Inc.](http://www.websharks-inc.com/)
 - Uses jQuery by [the jQuery Foundation](http://jquery.com/)
+
+---
+
+This project is now on Floobits too! [Watch us code](https://floobits.com/jaswsinc/slackmagic/redirect) in real-time :-) <a href="https://floobits.com/jaswsinc/slackmagic/redirect"><img alt="Floobits status" width="100" height="40" src="https://floobits.com/jaswsinc/slackmagic.png" align="right" /></a>
