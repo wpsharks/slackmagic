@@ -155,6 +155,14 @@
 		$('#msgs_div').find('> .message').has('> .message_sender[class*="via_HipChat"]')
 			.addClass('via-hipchat'); // Mark via HipChat for CSS styles.
 
+		$('#msgs_div').find('> .message.bot_message:not(.via-hipchat):not(.no-divider)')
+			.filter(function() // Those preceeded by a non-bot|hipchat message.
+			        {
+				        var $this = $(this), $prev = $this.prev();
+				        return !($prev.hasClass('bot_message') && !$prev.hasClass('via-hipchat'));
+
+			        }).addClass('no-divider');
+
 		var current_user_name = $.trim($('#current_user_name').text());
 		$('#msgs_div > .message > .message_content a.internal_member_link[data-member-name="' + current_user_name + '"],' +
 		  '#member_mentions > .message > .message_content a.internal_member_link[data-member-name="' + current_user_name + '"],' +

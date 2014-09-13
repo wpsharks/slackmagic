@@ -3,7 +3,7 @@ Background Colors
 */
 #messages_container, #footer
 {
-	background : #EEEEEE !important;
+	background : #EEEEEE url('https://cdn.websharks-inc.com/media/images/slackmagic-bg-tex.png') !important;
 }
 #channel_members_toggle,
 #msgs_div > .day_divider,
@@ -23,7 +23,6 @@ Background Colors
 {
 	color : #BABBBF !important;
 }
-
 /*
 Message Dividers
 */
@@ -31,13 +30,13 @@ Message Dividers
 {
 	margin : 0 !important;
 }
-#msgs_div > .message:before
+#msgs_div > .message::before
 {
 	content    : '' !important;
 	clear      : both !important;
 	display    : block !important;
-	margin     : 5px 0 5px 0 !important;
-	border-top : 1px dashed #DBDBDB !important;
+	margin     : 0 0 10px 0 !important;
+	border-top : 1px dotted #D1D1D1 !important;
 }
 #msgs_div > #msgs_unread_divider
 {
@@ -50,7 +49,10 @@ Message Dividers
 	font-weight : bold !important;
 	margin      : -0.8em 0 0 0 !important;
 }
-
+#msgs_div > .day_divider > .day_divider_label
+{
+	padding : .1em .5em .1em .5em !important;
+}
 /*
 Messages
 */
@@ -66,8 +68,9 @@ Messages
 #msgs_div > .message.show_user > a.member_image,
 #msgs_div > .message.show_user > a > .member_image
 {
-	top  : 5px !important;
-	left : 5px !important;
+	opacity : 1 !important;
+	top     : 5px !important;
+	left    : 5px !important;
 }
 #msgs_div > .message > .message_star_holder
 {
@@ -76,7 +79,7 @@ Messages
 	right    : 20px !important;
 	position : absolute !important;
 }
-.dense_theme #msgs_div > .message > .message_sender:after
+.dense_theme #msgs_div > .message > .message_sender::after
 {
 	content      : ':';
 	display      : inline-block;
@@ -88,7 +91,10 @@ Messages
 	zoom    : 0.9 !important;
 	opacity : 0.7 !important;
 }
-
+#msgs_div > .message > .message_content > .inline_attachment > .inline_attachment_wrapper.standalone
+{
+	padding-bottom : 0 !important;
+}
 /*
 Chat Messages
 */
@@ -101,8 +107,8 @@ Chat Messages
 	margin        : 10px 0 10px 0 !important;
 	box-shadow    : 0 0 2px 2px rgba(255, 255, 255, 0.5) !important;
 }
-#msgs_div > .message.via-hipchat:before,
-#msgs_div > .message:not(.bot_message):before
+#msgs_div > .message.via-hipchat::before,
+#msgs_div > .message:not(.bot_message)::before
 {
 	display : none !important;
 }
@@ -115,15 +121,18 @@ body.no_avatars #msgs_div > .message.via-hipchat > .message_sender > a > img.inl
 {
 	display : none !important;
 }
-
 /*
 Bot Messages
 */
 #msgs_div > .message.bot_message:not(.via-hipchat)
 {
-	zoom : 0.9 !important;
+	zoom   : 0.95 !important;
+	margin : 10px 0 10px 0 !important;
 }
-
+#msgs_div > .message.bot_message:not(.via-hipchat).no-divider::before
+{
+	display : none !important;
+}
 /*
 Mentions
 */
@@ -143,11 +152,11 @@ Mentions
 #member_mentions > .message > .message_content a.internal_member_link[data-member-name],
 #search_message_results > .message > .message_content a.internal_member_link[data-member-name]
 {
-	line-height     : 1em !important;
+	line-height     : 1.2em !important;
 	border-radius   : 4px !important;
 	text-decoration : none !important;
 	display         : inline-block !important;
-	padding         : 0.025em 0.05em !important;
+	padding         : 0 0.25em !important;
 
 	color           : #000000 !important;
 	border          : 1px solid #C2C2C2 !important;
@@ -172,7 +181,7 @@ Mentions
 	font-weight  : 900 !important;
 	color        : #FFFFFF !important;
 	border-color : #4783BF !important;
-	background   : #4282C1 url('chrome-extension://__MSG_@@extension_id__/images/me-bg.png') repeat-x !important;
+	background   : #4282C1 url('https://cdn.websharks-inc.com/media/images/slackmagic-me-bg.png') repeat-x !important;
 }
 #msgs_div > .message > .message_content a.internal_member_link[data-member-name] > .mention,
 #member_mentions > .message > .message_content a.internal_member_link[data-member-name] > .mention,
