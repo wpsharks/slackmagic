@@ -289,7 +289,7 @@ Bot Message Background Colors
 	margin-left: -20px !important;
 }
 .dense_theme .bot_message.via-mailchimp {
-	background-color: rgb(173, 210, 219) !important;
+	background-color: rgb(205, 225, 229) !important;
 }
 .dense_theme #msgs_div > .message.via-mailchimp::before {
 	border-top: 1px solid rgb(143, 203, 218) !important;
