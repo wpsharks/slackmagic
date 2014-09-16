@@ -60,6 +60,8 @@ Messages
 {
 	padding: 0 !important;
 }
+
+/* hide extra lines for bot messages */
 .dense_theme #msgs_div > .message.bot_message:not(.via-hipchat) > .message_content
 {
 	vertical-align : middle !important;
@@ -127,7 +129,9 @@ Chat Messages
 	border-top    : 1px solid #eee !important;
 	background    : #FFFFFF !important;
 	margin        : 0 !important;
+	margin-right  : 20px !important;
 	padding       : 2px 10px !important;
+	padding-left: 20px !important;
 	/* box-shadow    : 0 0 2px 2px rgba(255, 255, 255, 0.5) !important; */
 }
 #msgs_div > .message.via-hipchat::before,
@@ -160,7 +164,8 @@ Bot Messages
 {
 	zoom   : 0.95 !important;
 	margin : 0 !important;
-	padding: 2px 10px !important;
+	padding: 0 !important;
+	padding-left: 20px !important;
 }
 #msgs_div > .message.bot_message:not(.via-hipchat).no-divider::before
 {
@@ -228,20 +233,116 @@ Emoji and Bot Messages
 */
 .dense_theme span.emoji {
 	background-image: none !important;
-	text-indent: 0;
-	display: inline;
+	text-indent: 0 !important;
+	display: inline !important;
 }
 .dense_theme span.emoji-sizer {
-	font-size: 14px;
-	font-weight: bold;
+	font-size: 14px !important;
+	font-weight: bold !important;
 }
 .dense_theme img.inline_bot_icon {
 	display: none !important;
 }
 .dense_theme span.emoji-outer.emoji-sizer {
-	display: none;
+	display: none !important;
 }
 .dense_theme #msgs_div > .message::before {
 	margin-top: 1px !important;
 	margin-bottom: 1px !important;
+}
+
+/*
+Bot Message Background Colors
+*/
+.dense_theme .message.first, .dense_theme .message.first.divider {
+	border-top: none !important;
+	margin-top: 0 !important;
+}
+.dense_theme .message.divider {
+	border-top: none !important;
+}
+.dense_theme #msgs_div > .message::before {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+.dense_theme .bot_message.via-zendesk {
+	background-color: rgb(214, 248, 214) !important;
+}
+.dense_theme #msgs_div > .message.via-zendesk::before {
+	border-top: 1px solid rgb(201, 236, 201) !important;
+	margin-left: -20px !important;
+}
+.dense_theme .bot_message.via-websharks-sales-log {
+	background-color: rgb(169, 211, 169) !important;
+}
+.dense_theme #msgs_div > .message.via-websharks-sales-log::before {
+	border-top: 1px solid rgb(169, 202, 169)  !important;
+	margin-left: -20px !important;
+}
+.dense_theme .bot_message[class$='-community'],
+.dense_theme .bot_message[class$='-updates'] {
+	background-color: rgb(245, 225, 200) !important;
+}
+.dense_theme #msgs_div > .message[class$='-community']::before,
+.dense_theme #msgs_div > .message[class$='-updates']::before {
+	border-top: 1px solid rgb(238, 206, 165) !important;
+	margin-left: -20px !important;
+}
+.dense_theme .bot_message.via-mailchimp {
+	background-color: rgb(173, 210, 219) !important;
+}
+.dense_theme #msgs_div > .message.via-mailchimp::before {
+	border-top: 1px solid rgb(143, 203, 218) !important;
+	margin-left: -20px !important;
+}
+.dense_theme .bot_message.via-github {
+	background-color: #f5f5f5 !important;
+}
+.dense_theme #msgs_div > .message.via-github::before {
+	border-top: 1px solid rgb(216, 224, 216) !important;
+	margin-left: -20px !important;
+}
+
+/*
+Message height (adjust the following three style declarations)
+*/
+.dense_theme #msgs_div > .message::before {
+	padding-top: 2px !important;
+}
+.dense_theme #msgs_div > .message::after {
+	padding-bottom: 2px !important;
+	display: block;
+	clear: both;
+	content: ' ' !important;
+}
+.dense_theme #msgs_div > .message.bot_message.no-divider,
+.dense_theme #msgs_div > .message.divider {
+	padding-top: 2px !important;
+}
+
+/*
+Move Timestamp to the righthand side
+*/
+.dense_theme .message .timestamp {
+	margin-left: 0 !important;
+	position: relative !important;
+	float: right !important;
+	padding-right: 15px !important;
+}
+.dense_theme .message.bot_message:not(.via-hipchat) .timestamp {
+	margin-right: 42px !important;
+}
+
+/*
+Unread Messages label
+*/
+#msgs_div > #msgs_unread_divider > .divider_label {
+	margin-right: 4rem !important;
+}
+
+/*
+Unread Messages banner
+*/
+.dense_theme .messages_banner {
+	margin-left: 220px !important;
 }
