@@ -24,7 +24,7 @@
 	{
 		slack.onDOMSubtreeModifiedRunning = true;
 
-		var $body = $('body'), threadedMsgs = [];
+		var $body = $('body'), threadedMsgs = [], linearMsgs = [];
 		var denseTheme = $body.hasClass('dense_theme');
 		var noAvatars = $body.hasClass('no_avatars');
 
@@ -38,6 +38,7 @@
 
 				      if(!($senderImage = $first.find('> .member_image').first().clone()).length)
 					      $senderImage = $first.find('> a[href^="/services/"]').has('> .member_image').first();
+
 				      $messageSender = $first.find('> .message_sender').first();
 
 				      threadedMsgs.push({
@@ -53,10 +54,34 @@
 			   && msg.$messageSender.length)
 			{
 				msg.$this.addClass('show_user');
+
 				if(!noAvatars) msg.$this.addClass('avatar');
 				if(!noAvatars) msg.$this.find('> .msg_actions').first().after(msg.$senderImage.clone());
+
 				msg.$this.find('> .timestamp').first()[denseTheme ? 'after' : 'before'](msg.$messageSender.clone());
 			}
+		});
+		$('#msgs_div').find('> .message:not(.hidden)')
+			.each(function()
+			      {
+				      var $this = $(this), $messageSender, $messageSenderSlug;
+
+				      $messageSender = $this.find('> .message_sender').first();
+
+				      $messageSenderSlug = $.trim($messageSender.text()).toLowerCase();
+				      $messageSenderSlug = $messageSenderSlug.replace(/[^a-z0-9]+/g, '-');
+				      $messageSenderSlug = $messageSenderSlug.replace(/^.+?\-via\-/i, '');
+
+				      linearMsgs.push({
+					                      '$this'             : $this,
+					                      '$messageSender'    : $messageSender,
+					                      '$messageSenderSlug': $messageSenderSlug
+				                      });
+			      });
+		$.each(linearMsgs, function(i, msg)
+		{
+			if(msg.$messageSender.length)
+				msg.$this.addClass('via-' + msg.$messageSenderSlug);
 		});
 		slack.onDOMSubtreeModifiedRunning = false;
 	};
