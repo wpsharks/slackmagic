@@ -60,6 +60,13 @@ Messages
 {
 	padding: 0 !important;
 }
+.dense_theme #msgs_div > .message.bot_message:not(.via-hipchat) > .message_content
+{
+	vertical-align : middle !important;
+	display        : inline-block !important;
+	height         : 1.15rem !important;
+	overflow-y     : hidden !important;
+}
 #msgs_div .copy_only
 {
 	display : none !important;
