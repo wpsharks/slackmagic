@@ -56,6 +56,10 @@ Message Dividers
 /*
 Messages
 */
+.dense_theme .msgs_holder
+{
+	padding: 0 !important;
+}
 #msgs_div .copy_only
 {
 	display : none !important;
@@ -107,6 +111,18 @@ Chat Messages
 	margin        : 10px 0 10px 0 !important;
 	box-shadow    : 0 0 2px 2px rgba(255, 255, 255, 0.5) !important;
 }
+
+.dense_theme #msgs_div > .message.via-hipchat,
+.dense_theme #msgs_div > .message:not(.bot_message)
+{
+	border        : 0 !important;
+	/* border-radius : 5px !important; */
+	border-top    : 1px solid #eee !important;
+	background    : #FFFFFF !important;
+	margin        : 0 !important;
+	padding       : 2px 10px !important;
+	/* box-shadow    : 0 0 2px 2px rgba(255, 255, 255, 0.5) !important; */
+}
 #msgs_div > .message.via-hipchat::before,
 #msgs_div > .message:not(.bot_message)::before
 {
@@ -121,6 +137,9 @@ body.no_avatars #msgs_div > .message.via-hipchat > .message_sender > a > img.inl
 {
 	display : none !important;
 }
+.dense_theme #msgs_div > .message > .message_sender {
+	margin-left: 0 !important;
+}
 /*
 Bot Messages
 */
@@ -128,6 +147,13 @@ Bot Messages
 {
 	zoom   : 0.95 !important;
 	margin : 10px 0 10px 0 !important;
+}
+
+.dense_theme #msgs_div > .message.bot_message:not(.via-hipchat)
+{
+	zoom   : 0.95 !important;
+	margin : 0 !important;
+	padding: 2px 10px !important;
 }
 #msgs_div > .message.bot_message:not(.via-hipchat).no-divider::before
 {
@@ -188,4 +214,27 @@ Mentions
 #search_message_results > .message > .message_content a.internal_member_link[data-member-name] > .mention
 {
 	background : none !important;
+}
+
+/*
+Emoji and Bot Messages
+*/
+.dense_theme span.emoji {
+	background-image: none !important;
+	text-indent: 0 !important;
+	display: inline !important;
+}
+.dense_theme span.emoji-sizer {
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+.dense_theme img.inline_bot_icon {
+	display: none !important;
+}
+.dense_theme span.emoji-outer.emoji-sizer {
+	display: none !important;
+}
+.dense_theme #msgs_div > .message::before {
+	margin-top: 1px !important;
+	margin-bottom: 1px !important;
 }
