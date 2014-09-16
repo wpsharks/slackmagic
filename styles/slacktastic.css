@@ -307,17 +307,17 @@ Bot Message Background Colors
 Message height (adjust the following three style declarations)
 */
 .dense_theme #msgs_div > .message::before {
-	padding-top: 2px !important;
+	padding-top: 5px !important;
 }
 .dense_theme #msgs_div > .message::after {
-	padding-bottom: 2px !important;
+	padding-bottom: 5px !important;
 	display: block;
 	clear: both;
 	content: ' ' !important;
 }
 .dense_theme #msgs_div > .message.bot_message.no-divider,
 .dense_theme #msgs_div > .message.divider {
-	padding-top: 2px !important;
+	padding-top: 5px !important;
 }
 
 /*
@@ -336,7 +336,7 @@ Move Timestamp to the righthand side
 /*
 Unread Messages label
 */
-#msgs_div > #msgs_unread_divider > .divider_label {
+.dense_theme #msgs_div > #msgs_unread_divider > .divider_label {
 	margin-right: 4rem !important;
 }
 

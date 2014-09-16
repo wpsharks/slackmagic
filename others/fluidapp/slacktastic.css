@@ -336,7 +336,7 @@ Move Timestamp to the righthand side
 /*
 Unread Messages label
 */
-#msgs_div > #msgs_unread_divider > .divider_label {
+.dense_theme #msgs_div > #msgs_unread_divider > .divider_label {
 	margin-right: 4rem !important;
 }
 
