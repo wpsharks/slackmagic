@@ -102,6 +102,16 @@ Chat Messages
 #msgs_div > .message:not(.bot_message)
 {
 	border        : 0 !important;
+	border-radius : 5px !important;
+	background    : #FFFFFF !important;
+	margin        : 10px 0 10px 0 !important;
+	box-shadow    : 0 0 2px 2px rgba(255, 255, 255, 0.5) !important;
+}
+
+.dense_theme #msgs_div > .message.via-hipchat,
+.dense_theme #msgs_div > .message:not(.bot_message)
+{
+	border        : 0 !important;
 	/* border-radius : 5px !important; */
 	border-top    : 1px solid #eee !important;
 	background    : #FFFFFF !important;
@@ -123,13 +133,19 @@ body.no_avatars #msgs_div > .message.via-hipchat > .message_sender > a > img.inl
 {
 	display : none !important;
 }
-#msgs_div > .message > .message_sender {
+.dense_theme #msgs_div > .message > .message_sender {
 	margin-left: 0 !important;
 }
 /*
 Bot Messages
 */
 #msgs_div > .message.bot_message:not(.via-hipchat)
+{
+	zoom   : 0.95 !important;
+	margin : 10px 0 10px 0 !important;
+}
+
+.dense_theme #msgs_div > .message.bot_message:not(.via-hipchat)
 {
 	zoom   : 0.95 !important;
 	margin : 0 !important;
@@ -145,15 +161,15 @@ Mentions
 #msgs_div > .message > .message_content .mention_group,
 #member_mentions > .message > .message_content .mention_group,
 #search_message_results > .message > .message_content .mention_group,
-
+	/**/
 #msgs_div > .message > .message_content .mention_channel,
 #member_mentions > .message > .message_content .mention_channel,
 #search_message_results > .message > .message_content .mention_channel,
-
+	/**/
 #msgs_div > .message > .message_content .mention_everyone,
 #member_mentions > .message > .message_content .mention_everyone,
 #search_message_results > .message > .message_content .mention_everyone,
-
+	/**/
 #msgs_div > .message > .message_content a.internal_member_link[data-member-name],
 #member_mentions > .message > .message_content a.internal_member_link[data-member-name],
 #search_message_results > .message > .message_content a.internal_member_link[data-member-name]
