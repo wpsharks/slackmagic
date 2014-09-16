@@ -62,7 +62,7 @@ Messages
 }
 
 /* hide extra lines for bot messages */
-.dense_theme #msgs_div > .message.bot_message:not(.via-hipchat) > .message_content
+.dense_theme #msgs_div > .message.bot_message:not(.via-hipchat):not(.via-megabite-the-websharks-bot-):not(.via-ifttt) > .message_content
 {
 	vertical-align : middle !important;
 	display        : inline-block !important;
