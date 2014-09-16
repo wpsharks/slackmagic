@@ -20,6 +20,16 @@ Slack theme/enhancements.
 - Choose the `slackmagic` folder and you're set.
 - Now just reload the Slack web interface.
 
+
+#### Using SlackMagic with FluidApp
+
+You can use [FluidApp](http://fluidapp.com/) to create a standalone Mac app from a webpage. 
+
+Once you've created a FluidApp with your Slack account, you can use SlackMagic inside the FluidApp by accessing **Window → Userscripts** and **Window → Userstlyes**, adding a new entry as shown in the screenshots below, and then adding the JS and CSS code from `others/fluidapp/scripts.js` and `others/fluidapp/slacktastic.css`.
+
+![2014-09-15_15-00-09](https://cloud.githubusercontent.com/assets/53005/4277070/1f77e30c-3d0b-11e4-816f-3a1d5b3ff8d1.png)
+![2014-09-15_15-00-13](https://cloud.githubusercontent.com/assets/53005/4277071/2086da82-3d0b-11e4-9a25-b0f39599add5.png)
+
 #### Credits / Additional Acknowledgments
 
 - Developed by [WebSharks, Inc.](http://www.websharks-inc.com/)
