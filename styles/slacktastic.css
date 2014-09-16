@@ -56,6 +56,10 @@ Message Dividers
 /*
 Messages
 */
+.dense_theme .msgs_holder
+{
+	padding: 0 !important;
+}
 #msgs_div .copy_only
 {
 	display : none !important;
