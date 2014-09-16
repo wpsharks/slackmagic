@@ -211,3 +211,26 @@ Mentions
 {
 	background : none !important;
 }
+
+/*
+Emoji and Bot Messages
+*/
+.dense_theme span.emoji {
+	background-image: none !important;
+	text-indent: 0;
+	display: inline;
+}
+.dense_theme span.emoji-sizer {
+	font-size: 14px;
+	font-weight: bold;
+}
+.dense_theme img.inline_bot_icon {
+	display: none !important;
+}
+.dense_theme span.emoji-outer.emoji-sizer {
+	display: none;
+}
+.dense_theme #msgs_div > .message::before {
+	margin-top: 1px !important;
+	margin-bottom: 1px !important;
+}
