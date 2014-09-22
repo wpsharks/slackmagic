@@ -231,7 +231,7 @@ Mentions
 /*
 Emoji and Bot Messages
 */
-.dense_theme span.emoji {
+.dense_theme .bot_message span.emoji {
 	background-image: none !important;
 	text-indent: 0 !important;
 	display: inline !important;
