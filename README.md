@@ -4,7 +4,7 @@
 
 Slack theme/enhancements.
 
-#### Installation Instructions
+### Installation Instructions
 
 - Download the ZIP file from the `000000-dev` branch here at GitHub.
   Or just clone the repo, that's fine too.
@@ -21,7 +21,7 @@ Slack theme/enhancements.
 - Now just reload the Slack web interface.
 
 
-#### Using SlackMagic with FluidApp
+### Using SlackMagic with FluidApp
 
 You can use [FluidApp](http://fluidapp.com/) to create a standalone Mac app from a webpage. 
 
@@ -30,7 +30,7 @@ Once you've created a FluidApp with your Slack account, you can use SlackMagic i
 ![2014-09-15_15-00-09](https://cloud.githubusercontent.com/assets/53005/4277070/1f77e30c-3d0b-11e4-816f-3a1d5b3ff8d1.png)
 ![2014-09-15_15-00-13](https://cloud.githubusercontent.com/assets/53005/4277071/2086da82-3d0b-11e4-9a25-b0f39599add5.png)
 
-#### Credits / Additional Acknowledgments
+### Credits / Additional Acknowledgments
 
 - Developed by [WebSharks, Inc.](http://www.websharks-inc.com/)
 - Uses jQuery by [the jQuery Foundation](http://jquery.com/)
@@ -38,3 +38,9 @@ Once you've created a FluidApp with your Slack account, you can use SlackMagic i
 ---
 
 This project is now on Floobits too! [Watch us code](https://floobits.com/jaswsinc/slackmagic/redirect) in real-time :-) <a href="https://floobits.com/jaswsinc/slackmagic/redirect"><img alt="Floobits status" width="100" height="40" src="https://floobits.com/jaswsinc/slackmagic.png" align="right" /></a>
+
+---
+
+### Throughput Graph (powered by waffle.io)
+
+[![Throughput Graph](https://graphs.waffle.io/websharks/slackmagic/throughput.svg)](https://waffle.io/websharks/slackmagic/metrics)
