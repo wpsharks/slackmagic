@@ -23,7 +23,7 @@ Slack theme/enhancements.
 
 ### Using SlackMagic with FluidApp
 
-You can use [FluidApp](http://fluidapp.com/) to create a standalone Mac app from a webpage. 
+You can use [FluidApp](http://fluidapp.com/) to create a standalone Mac app from a webpage.
 
 Once you've created a FluidApp with your Slack account, you can use SlackMagic inside the FluidApp by accessing **Window → Userscripts** and **Window → Userstlyes**, adding a new entry as shown in the screenshots below, and then adding the JS and CSS code from `others/fluidapp/scripts.js` and `others/fluidapp/slacktastic.css`.
 
@@ -34,13 +34,3 @@ Once you've created a FluidApp with your Slack account, you can use SlackMagic i
 
 - Developed by [WebSharks, Inc.](http://www.websharks-inc.com/)
 - Uses jQuery by [the jQuery Foundation](http://jquery.com/)
-
----
-
-This project is now on Floobits too! [Watch us code](https://floobits.com/jaswsinc/slackmagic/redirect) in real-time :-) <a href="https://floobits.com/jaswsinc/slackmagic/redirect"><img alt="Floobits status" width="100" height="40" src="https://floobits.com/jaswsinc/slackmagic.png" align="right" /></a>
-
----
-
-### Throughput Graph (powered by waffle.io)
-
-[![Throughput Graph](https://graphs.waffle.io/websharks/slackmagic/throughput.svg)](https://waffle.io/websharks/slackmagic/metrics)
